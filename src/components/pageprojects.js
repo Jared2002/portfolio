@@ -13,7 +13,7 @@ const Pageprojects = () =>{
         technologies: ["HTML5", "CSS3", "ReactJS", "Figma"],
         img: "./assets/img/portfolio.png",
         url: "/index.html",
-        github: ""
+        github: "https://github.com/Jared2002/portfolio"
       },
       {
         name: "All- M",
