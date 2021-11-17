@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { useEffect, useState } from 'react';
 import { Fragment } from 'react/cjs/react.production.min';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter , Switch, Route } from 'react-router-dom';
 import H1 from './components/h1';
 import P from './components/paragraph';
 import Home from './components/home';
@@ -82,19 +82,23 @@ const App = ({def}) => {
         </div>
       </nav>
     </div>
-
-      <Router>
+    
           <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
             <Route path='/projects'>
               <Pageprojects/>
             </Route>
-            <Route path='/'>
-              <Home />
-            </Route>
           </Switch>
-        </Router>
     </Fragment>
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+    , document.getElementById('root'));
