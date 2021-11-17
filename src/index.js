@@ -53,7 +53,7 @@ const App = ({def}) => {
       <nav className="menu-hidden none" id="menuButton">
           <a href="./index.html"><P text="Home"/></a>
           <a href="https://www.youtube.com"><P id="dark" text="Blog"/></a>
-          <a href="/portfolio/projects"><P text="Proyectos"/></a>
+          <a href="./projects"><P text="Proyectos"/></a>
           <div className="check-container">
           <button defaultValue={def} onClick={handleThemeChange} className="theme" id="theme">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

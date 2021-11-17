@@ -4,7 +4,7 @@ import { Fragment } from "react/cjs/react.production.min";
 const H2 = ({text,id}) => <h2 id={id}>{text}</h2>
 const Img = ({src, c}) => <img className={c} src={src} alt="hola"></img>
 const P = ({text, c, id}) => <p id={id} className={c}>{text}</p>
-const Button = ({text, c, onClick }) => <button className={c} onClick={onClick}><a href="/portfolio/projects">{text}</a></button>
+const Button = ({text, c, onClick }) => <button className={c} onClick={onClick}><a href="./projects">{text}</a></button>
 const Hero = () =>{
     return (
       <Fragment>
