@@ -9,7 +9,7 @@ const Hero = () =>{
     return (
       <Fragment>
         <div className="main-face--img-container">
-          <Img c="main-face--img" src="./assets/img/imgPrincipal.png"/>
+          <Img c="main-face--img" src={process.env.PUBLIC_URL + "/assets/img/imgPrincipal.png"}/>
           <div className="deg"></div>
         </div>
         <div className="hero">

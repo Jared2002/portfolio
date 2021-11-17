@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { useEffect, useState } from 'react';
 import { Fragment } from 'react/cjs/react.production.min';
-import { BrowserRouter , Switch, Route } from 'react-router-dom';
+import { BrowserRouter , Switch, Route, Link } from 'react-router-dom';
 import H1 from './components/h1';
 import P from './components/paragraph';
 import Home from './components/home';
@@ -42,7 +42,7 @@ const App = ({def}) => {
   return(
     <Fragment>
     <div className="header">
-      <a href="./index.html"><H1 id="dark" text= "Jared Romero"/></a>
+      <Link to="/"><H1 id="dark" text= "Jared Romero"/></Link>
       <button className="menuButton" onClick={handleShow}>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3334 15.9999C26.3334 15.4476 25.8856 14.9999 25.3334 14.9999H6.66669C6.1144 14.9999 5.66669 15.4476 5.66669 15.9999C5.66669 16.5522 6.1144 16.9999 6.66669 16.9999H25.3334C25.8856 16.9999 26.3334 16.5522 26.3334 15.9999Z" fill="#082032"/>
@@ -51,9 +51,9 @@ const App = ({def}) => {
         </svg>
       </button>
       <nav className="menu-hidden none" id="menuButton">
-          <a href="./index.html"><P text="Home"/></a>
-          <a href="https://www.youtube.com"><P id="dark" text="Blog"/></a>
-          <a href="./projects"><P text="Proyectos"/></a>
+          <Link to="./"><P text="Home"/></Link>
+          <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><P id="dark" text="Blog"/></a>
+          <Link to="/projects"><P text="Proyectos"/></Link>
           <div className="check-container">
           <button defaultValue={def} onClick={handleThemeChange} className="theme" id="theme">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,13 +82,12 @@ const App = ({def}) => {
         </div>
       </nav>
     </div>
-    
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
             <Route path='/projects'>
               <Pageprojects/>
+            </Route>
+            <Route path='/'>
+              <Home />
             </Route>
           </Switch>
     </Fragment>
@@ -96,9 +95,7 @@ const App = ({def}) => {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
     , document.getElementById('root'));

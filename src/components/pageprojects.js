@@ -11,7 +11,7 @@ const Pageprojects = () =>{
         explanation: "Al ser este mi primer proyecto serio, creí necesario adoptar un diseño básico pero bonito, utilizando colores claros y oscuros para hacer el cambio de tema, además del color amarillo para representar mi gusto a Javascript.",
         explanationTwo:"Planeo empezar a desarrollar en React, por lo que este es el proyecto elegido para empezar a prácticar. Las posibles nuevas actualizaciones a este proyecto son integrar un sistema de blog dentro de la página, además de mejorar y elevar la calidad del diseño.",
         technologies: ["HTML5", "CSS3", "ReactJS", "Figma"],
-        img: "./assets/img/portfolio.png",
+        img: process.env.PUBLIC_URL + "/assets/img/portfolio.png",
         url: "/index.html",
         github: "https://github.com/Jared2002/portfolio"
       },
@@ -22,7 +22,7 @@ const Pageprojects = () =>{
         explanation: "La paleta de colores de este proyecto fue elegida por el logo de Marvel, ademas de la eleccion de poner los enlaces a mis redes sociales en la parte superior de la pantalla, pues al tener un scroll infinito, si se ponian al final nunca iban a poder clikearse. Además cuenta con un diseño responsivo",
         explanationTwo:"Las posibles nuevas actualizaciones a este proyecto contendran un espacio para la busqueda de personajes individuales, además de al hacer click en cada persona que te redirija a una pagina especial por personaje con la misma línea de diseño.",
         technologies: ["HTML5", "CSS3", "Javascript", "Figma"],
-        img: "./assets/img/ex1.png",
+        img: process.env.PUBLIC_URL + "/assets/img/ex1.png",
         url: "https://jared2002.github.io/All-M/",
         github: "https://github.com/Jared2002/All-M/tree/master"
       }

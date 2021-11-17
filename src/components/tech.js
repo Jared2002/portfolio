@@ -24,10 +24,10 @@ const Tech = () =>{
       <Fragment>
         <H2 text="Tecnologías"/>
         <div className="tech-image-container">
-          <Img c="tech-image-1" src="./assets/icons/html.svg"/>
-          <Img c="tech-image-2" src="./assets/icons/css.svg"/>
-          <Img c="tech-image-3" src="./assets/icons/js.svg"/>
-          <Img c="tech-image-4" src="./assets/icons/react.svg"/>
+          <Img c="tech-image-1" src={process.env.PUBLIC_URL + "/assets/icons/html.svg"}/>
+          <Img c="tech-image-2" src={process.env.PUBLIC_URL + "/assets/icons/css.svg"}/>
+          <Img c="tech-image-3" src={process.env.PUBLIC_URL + "/assets/icons/js.svg"}/>
+          <Img c="tech-image-4" src={process.env.PUBLIC_URL + "/assets/icons/react.svg"}/>
         </div>
         <P id="dark" c="pOct none" text="Por el momento estas son mis únicas tecnologías :("/>
         <Button id="dark" text={textState} c="button more" onClick={handleClickMore}/>
