@@ -51,9 +51,9 @@ const App = ({def}) => {
         </svg>
       </button>
       <nav className="menu-hidden none" id="menuButton">
-          <Link to="./"><P text="Home"/></Link>
+          <Link to="/portfolio/"><P text="Home"/></Link>
           <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><P id="dark" text="Blog"/></a>
-          <Link to="/projects"><P text="Proyectos"/></Link>
+          <Link to="/portfolio/projects"><P text="Proyectos"/></Link>
           <div className="check-container">
           <button defaultValue={def} onClick={handleThemeChange} className="theme" id="theme">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,10 +83,10 @@ const App = ({def}) => {
       </nav>
     </div>
           <Switch>
-            <Route path='/projects'>
+            <Route path='/portfolio/projects'>
               <Pageprojects/>
             </Route>
-            <Route path='/'>
+            <Route path='/portfolio/'>
               <Home />
             </Route>
           </Switch>
