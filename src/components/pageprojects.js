@@ -12,7 +12,7 @@ const Pageprojects = () =>{
         explanationTwo:"Planeo empezar a desarrollar en React, por lo que este es el proyecto elegido para empezar a prácticar. Las posibles nuevas actualizaciones a este proyecto son integrar un sistema de blog dentro de la página, además de mejorar y elevar la calidad del diseño.",
         technologies: ["HTML5", "CSS3", "ReactJS", "Figma"],
         img: process.env.PUBLIC_URL + "/assets/img/portfolio.png",
-        url: "/index.html",
+        url: "https://jared2002.github.io/portfolio/",
         github: "https://github.com/Jared2002/portfolio"
       },
       {

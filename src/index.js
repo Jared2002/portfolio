@@ -52,7 +52,7 @@ const App = ({def}) => {
       </button>
       <nav className="menu-hidden none" id="menuButton">
           <Link to="/portfolio/"><P text="Home"/></Link>
-          <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><P id="dark" text="Blog"/></a>
+          <a href="https://jaredromero-blog.blogspot.com/" target="_blank" rel="noreferrer"><P id="dark" text="Blog"/></a>
           <Link to="/portfolio/projects/"><P text="Proyectos"/></Link>
           <div className="check-container">
           <button defaultValue={def} onClick={handleThemeChange} className="theme" id="theme">
