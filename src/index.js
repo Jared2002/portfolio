@@ -85,7 +85,7 @@ const App = ({def}) => {
 
       <Router>
           <Switch>
-            <Route path='/portfolio/projects'>
+            <Route path='/projects'>
               <Pageprojects/>
             </Route>
             <Route path='/'>
