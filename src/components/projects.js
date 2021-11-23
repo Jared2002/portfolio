@@ -11,7 +11,7 @@ const Projects = () =>{
         <div className="projects-image-container">
           <Img c="project-image-p1" src={process.env.PUBLIC_URL + "/assets/img/ex1.png"}/>
           <Img c="project-image-p2" src={process.env.PUBLIC_URL + "/assets/img/portfolio.png"}/>
-          <Img c="project-image-p3" src={process.env.PUBLIC_URL + "/assets/img/ex2.jpg"}/>
+          <Img c="project-image-p3" src={process.env.PUBLIC_URL + "/assets/img/google.jpg"}/>
         </div>
         <Button text="Ver todos" c="button more"/>
       </div>

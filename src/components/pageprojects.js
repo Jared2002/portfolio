@@ -25,6 +25,17 @@ const Pageprojects = () =>{
         img: process.env.PUBLIC_URL + "/assets/img/ex1.png",
         url: "https://jared2002.github.io/All-M/",
         github: "https://github.com/Jared2002/All-M/tree/master"
+      },
+      {
+        name: "Clone Google",
+        id: 3,
+        smallText: "Este proyecto fue hecho siguiendo los cursos de HTML y CSS de la plataforma de educación online Platzi",
+        explanation: "Se hizo un clon de la página principal de busqueda de Google, como practica para los conceptos de HTML y CSS aprendidos",
+        explanationTwo:"Se adquiririeron conceptos de maquetación CSS y se práctico con un ejemplo real para mejorar la línea y estructura en CSS, para seguir prácticando se planea ahora duplicar la página de Wikipedia.org",
+        technologies: ["HTML5", "CSS3", "Platzi"],
+        img: process.env.PUBLIC_URL + "",
+        url: "https://jared2002.github.io/google/",
+        github: "https://github.com/Jared2002/google"
       }
     ]  
   
