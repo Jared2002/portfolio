@@ -33,7 +33,7 @@ const Pageprojects = () =>{
         explanation: "Se hizo un clon de la página principal de busqueda de Google, como practica para los conceptos de HTML y CSS aprendidos",
         explanationTwo:"Se adquiririeron conceptos de maquetación CSS y se práctico con un ejemplo real para mejorar la línea y estructura en CSS, para seguir prácticando se planea ahora duplicar la página de Wikipedia.org",
         technologies: ["HTML5", "CSS3", "Platzi"],
-        img: process.env.PUBLIC_URL + "",
+        img: process.env.PUBLIC_URL + "/assets/img/google.jpg",
         url: "https://jared2002.github.io/google/",
         github: "https://github.com/Jared2002/google"
       }
