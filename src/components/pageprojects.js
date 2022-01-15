@@ -1,6 +1,7 @@
 import { Fragment } from "react/cjs/react.production.min";
 import Main from "./main";
 import Footer from "./footer";
+import React from "react";
 
 const Pageprojects = () =>{
     const projects = [
@@ -13,31 +14,58 @@ const Pageprojects = () =>{
         technologies: ["HTML5", "CSS3", "ReactJS", "Figma"],
         img: process.env.PUBLIC_URL + "/assets/img/portfolio.png",
         url: "https://jared2002.github.io/portfolio/",
-        github: "https://github.com/Jared2002/portfolio"
+        github: "https://github.com/Jared2002/portfolio",
+        open: false
+      },
+      {
+        name: "React Pokedex",
+        id: 2,
+        smallText: "Este proyecto esta hecho utilizando la API de Pokemon.",
+        explanation: "Este es un desarrollo un poco más serio, tanto en las tecnologías utilizadas como en la metodología utilizada. Además de que el deploy esté hecho en la plataforma de Netlify.",
+        explanationTwo:"Principalmente, el gran desarrollo esta en representar en una tabla todos los pokemon y al seleccionar uno que te despliegue su información en un panel aparte. Además de que se trato no utilizar el típico comando de create-react-app",
+        technologies: ["HTML5", "CSS3", "ReactJS", "API", "Webpack", "SASS"],
+        img: process.env.PUBLIC_URL + "/assets/img/reactPokedex.png",
+        url: "https://tender-stonebraker-d1e7e9.netlify.app/",
+        github: "https://github.com/Jared2002/pokedex",
+        open: false
       },
       {
         name: "All- M",
-        id: 2,
+        id: 3,
         smallText: "Este proyecto fue hecho utilizando la API pública de Marvel, creando una SPA con scroll infinito.",
         explanation: "La paleta de colores de este proyecto fue elegida por el logo de Marvel, ademas de la eleccion de poner los enlaces a mis redes sociales en la parte superior de la pantalla, pues al tener un scroll infinito, si se ponian al final nunca iban a poder clikearse. Además cuenta con un diseño responsivo",
         explanationTwo:"Las posibles nuevas actualizaciones a este proyecto contendran un espacio para la busqueda de personajes individuales, además de al hacer click en cada persona que te redirija a una pagina especial por personaje con la misma línea de diseño.",
-        technologies: ["HTML5", "CSS3", "Javascript", "Figma"],
+        technologies: ["HTML5", "CSS3", "Javascript", "Figma", "API"],
         img: process.env.PUBLIC_URL + "/assets/img/ex1.png",
         url: "https://jared2002.github.io/All-M/",
-        github: "https://github.com/Jared2002/All-M/tree/master"
+        github: "https://github.com/Jared2002/All-M/tree/master",
+        open: false
+      },
+      {
+        name: "nasApp",
+        id: 4,
+        smallText: "Este proyecto fue hecho utilizando la API pública de la NASA, hecha para encontrar un carrusel de imagenes relevantes del cosmos.",
+        explanation: "Principalmente se elegío esa paleta de colores para representar el espacio, y la relación que este tiene a la NASA, además de que quise experimentar con un carrusel de cartas horizontal.",
+        explanationTwo:"A dia de hoy la app tiene un limite de cartas por carga, para ver otras cartas tienes que recargar la página, es un aspecto que quiero mejorar.",
+        technologies: ["HTML5", "CSS3", "Javascript", "API"],
+        img: process.env.PUBLIC_URL + "/assets/img/nasApp.png",
+        url: "https://jared2002.github.io/nasaAPP/",
+        github: "https://github.com/Jared2002/nasaAPP",
+        open: false
       },
       {
         name: "Clone Google",
-        id: 3,
+        id: 5,
         smallText: "Este proyecto fue hecho siguiendo los cursos de HTML y CSS de la plataforma de educación online Platzi",
         explanation: "Se hizo un clon de la página principal de busqueda de Google, como practica para los conceptos de HTML y CSS aprendidos",
         explanationTwo:"Se adquiririeron conceptos de maquetación CSS y se práctico con un ejemplo real para mejorar la línea y estructura en CSS, para seguir prácticando se planea ahora duplicar la página de Wikipedia.org",
         technologies: ["HTML5", "CSS3", "Platzi"],
         img: process.env.PUBLIC_URL + "/assets/img/google.jpg",
         url: "https://jared2002.github.io/google/",
-        github: "https://github.com/Jared2002/google"
+        github: "https://github.com/Jared2002/google",
+        open: false
       }
-    ]  
+    ]
   
     return(
       <Fragment>

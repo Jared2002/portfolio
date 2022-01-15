@@ -7,25 +7,27 @@ const P = ({text}) => <p>{text}</p>
 const Button = ({text, c, onClick, id}) => <button id={id} className={c} onClick={onClick}>{text}</button>
 const Main = (proj) => {
     const proje = proj.proj;
-    const [textState, setTextState] = useState("Ver más");
-    
+    let status = [];
+    proje.map(project => {
+      status.push(project.open);
+      return status;
+    })
+    const [textState, setTextState] = useState([]);
+
+    const handleClickMore = (e) => {
+      const id = e.target.id - 1;
+      let newStatus = [...status]
+      status[id] === false 
+        ? newStatus[id] = true
+        : newStatus[id] = false
+      setTextState(newStatus)
+    }
+
     return(
       <div>
         <H2 text="Estos son los proyectos que he realizado." />
         {proje.map(project =>{
-          const handleClickMore = (e) =>{
-            const id = e.target.id
-            const elementId = document.getElementById(id)
-            elementId.classList.toggle("none");
-            let newTextState = textState
-            if (newTextState === "Ver más"){
-              newTextState = "Ver menos"
-              setTextState(newTextState)
-            } else{
-              newTextState = "Ver más"
-              setTextState(newTextState)}
-          }
-  
+          const rID = project.id - 1;
           return(
             <Fragment key={project.id}>
               <div className="project-container" key={project.id}>
@@ -37,7 +39,8 @@ const Main = (proj) => {
                 <div className="img-project-container">
                   <img className="project-image" src={project.img} alt={project.name}></img>
                 </div>
-                <div id={project.id} className="project-container-hide none" key={project.id + ".1"}>
+                {textState[rID] === true && 
+                <div id={project.id} className="project-container-hide" key={project.id + ".1"}>
                   <P text={project.explanationTwo}/>
                   <P text={project.explanation}/>
                   <div className="tech-used-container">
@@ -59,9 +62,9 @@ const Main = (proj) => {
                       </svg>
                     </a>
                   </div>
-                </div>
+                </div>}
               </div>
-              <Button id={project.id} text={textState} c="button more" onClick={handleClickMore}/>
+              <Button id={project.id} text={textState[rID] === true ? 'Ver menos' : 'Ver más'} c="button more" onClick={handleClickMore}/>
             </Fragment>
           )
         })}
